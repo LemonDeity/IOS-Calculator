@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var modulus: UIButton!
     @IBOutlet weak var divide: UIButton!
     @IBOutlet weak var multiply: UIButton!
+    @IBOutlet weak var carrot: UIButton!
     @IBOutlet weak var minus: UIButton!
     @IBOutlet weak var plus: UIButton!
     @IBOutlet weak var decimal: UIButton!
@@ -52,6 +53,8 @@ class ViewController: UIViewController {
                 print(4)
             case "5":
                 print(5)
+            case "6":
+                print(6)
             case "7":
                 print(7)
             case "8":
@@ -62,7 +65,21 @@ class ViewController: UIViewController {
                 print("+")
             case "-":
                 print("-")
-            
+            case "Clear":
+                print("Clear")
+            case "%":
+                print("%")
+            case "±":
+                print("±")
+            case ".":
+                print(".")
+            case "÷":
+                print("÷")
+                
+            case "X":
+                print("X")
+            case "^":
+                print("^")
             default:
                 print("Something isn't hooked up")
             }

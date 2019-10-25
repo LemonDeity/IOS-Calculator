@@ -159,7 +159,7 @@
                                                                 <rect key="frame" x="311.5" y="0.0" width="102.5" height="107"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.096373205370000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <state key="normal" title="X"/>
+                                                                <state key="normal" title="^"/>
                                                                 <connections>
                                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdN-3i-LQQ"/>
                                                                 </connections>
@@ -281,6 +281,7 @@
                         <outlet property="b7" destination="PjZ-L4-7JF" id="XFB-uA-YPD"/>
                         <outlet property="b8" destination="ThL-Ac-kZD" id="9LY-D5-kLo"/>
                         <outlet property="b9" destination="hSy-mi-9Hg" id="mVS-qm-2Cf"/>
+                        <outlet property="carrot" destination="TKH-TK-3Kq" id="Zhd-oe-Nn3"/>
                         <outlet property="clearButton" destination="aCk-I5-mUU" id="H3q-c0-VfJ"/>
                         <outlet property="decimal" destination="8cz-is-Lr4" id="nK6-sY-0Ik"/>
                         <outlet property="divide" destination="DWK-kq-Kya" id="htu-kl-efm"/>
