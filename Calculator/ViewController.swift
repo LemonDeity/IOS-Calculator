@@ -34,9 +34,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        answer.text = ""
+        
+    }
+    var currAns:Double = 0{
+        willSet{
+            answer.text = String(currAns)
+        }didSet{
+            answer.text = String(currAns)
+        }
     }
     
+    var currPlaceValue:Int = 0
+    //negative numbers denote values below ones place-value
     
    
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -44,8 +53,8 @@ class ViewController: UIViewController {
             switch(u){
             case "0":
                 print(0)
-                
             case "1":
+                createNumber(1)
                 print(1)
             case "2":
                 print(2)
@@ -85,7 +94,13 @@ class ViewController: UIViewController {
             default:
                 print("Something isn't hooked up")
             }
+            
         }
+        
+        func createNumber(number : Int){
+            currAns += Double(number*(10^currPlaceValue))
+        }
+        
     }
     
 
