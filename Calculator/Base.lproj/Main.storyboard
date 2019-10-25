@@ -24,8 +24,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ls9-kx-fry">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="278"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ial-hM-3H5">
-                                                <rect key="frame" x="335" y="234" width="71" height="36"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-PY-mqX">
+                                                <rect key="frame" x="313" y="145" width="93" height="56"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ial-hM-3H5">
+                                                <rect key="frame" x="313" y="222" width="93" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="eah-3S-MNf"/>
+                                                    <constraint firstAttribute="width" constant="93" id="oEH-1H-bT9"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -33,8 +43,13 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Ial-hM-3H5" secondAttribute="trailing" constant="8" id="VtG-vb-dVD"/>
-                                            <constraint firstAttribute="bottom" secondItem="Ial-hM-3H5" secondAttribute="bottom" constant="8" id="lAP-dd-jbb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ial-hM-3H5" secondAttribute="trailing" constant="8" id="5gx-vl-YCc"/>
+                                            <constraint firstItem="eQg-PY-mqX" firstAttribute="width" secondItem="Ial-hM-3H5" secondAttribute="width" id="98v-Fb-W2d"/>
+                                            <constraint firstItem="Ial-hM-3H5" firstAttribute="top" secondItem="eQg-PY-mqX" secondAttribute="bottom" constant="21" id="EwM-u5-HvQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ial-hM-3H5" secondAttribute="bottom" id="Fh1-rf-064"/>
+                                            <constraint firstAttribute="trailing" secondItem="eQg-PY-mqX" secondAttribute="trailing" constant="8" id="Hfa-6l-k6s"/>
+                                            <constraint firstAttribute="trailing" secondItem="eQg-PY-mqX" secondAttribute="trailing" constant="8" id="Yco-ni-364"/>
+                                            <constraint firstItem="eQg-PY-mqX" firstAttribute="height" secondItem="Ial-hM-3H5" secondAttribute="height" id="c3Q-T4-UIG"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnp-iK-VWe">
@@ -159,7 +174,7 @@
                                                                 <rect key="frame" x="311.5" y="0.0" width="102.5" height="107"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.096373205370000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <state key="normal" title="^"/>
+                                                                <state key="normal" title="-"/>
                                                                 <connections>
                                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdN-3i-LQQ"/>
                                                                 </connections>
@@ -200,7 +215,7 @@
                                                                 <rect key="frame" x="311.5" y="0.0" width="102.5" height="107.5"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.096373205370000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <state key="normal" title="-"/>
+                                                                <state key="normal" title="+"/>
                                                                 <connections>
                                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdg-ge-R6N"/>
                                                                 </connections>
@@ -232,7 +247,7 @@
                                                                 <rect key="frame" x="311" y="0.0" width="103" height="107"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.096373205370000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="+"/>
+                                                                <state key="normal" title="="/>
                                                                 <connections>
                                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uh5-RL-MWX"/>
                                                                 </connections>
@@ -290,6 +305,7 @@
                         <outlet property="modulus" destination="KmH-QJ-xa6" id="RZc-wb-DUL"/>
                         <outlet property="multiply" destination="PuV-xa-VEu" id="dgb-3v-HC3"/>
                         <outlet property="plus" destination="pzw-Hk-QXG" id="WIe-1r-hhR"/>
+                        <outlet property="previous" destination="eQg-PY-mqX" id="1nl-uA-0I2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

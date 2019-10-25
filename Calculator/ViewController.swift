@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var previous: UILabel!
     @IBOutlet weak var answer: UILabel!
     @IBOutlet weak var b0: UIButton!
     @IBOutlet weak var b1: UIButton!
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
             switch(u){
             case "0":
                 print(0)
+                
             case "1":
                 print(1)
             case "2":
@@ -78,8 +80,8 @@ class ViewController: UIViewController {
                 
             case "X":
                 print("X")
-            case "^":
-                print("^")
+            case "=":
+                print("=")
             default:
                 print("Something isn't hooked up")
             }
