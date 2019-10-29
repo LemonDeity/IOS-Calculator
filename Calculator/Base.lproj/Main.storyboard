@@ -296,15 +296,15 @@
                         <outlet property="b7" destination="PjZ-L4-7JF" id="XFB-uA-YPD"/>
                         <outlet property="b8" destination="ThL-Ac-kZD" id="9LY-D5-kLo"/>
                         <outlet property="b9" destination="hSy-mi-9Hg" id="mVS-qm-2Cf"/>
-                        <outlet property="carrot" destination="TKH-TK-3Kq" id="Zhd-oe-Nn3"/>
                         <outlet property="clearButton" destination="aCk-I5-mUU" id="H3q-c0-VfJ"/>
                         <outlet property="decimal" destination="8cz-is-Lr4" id="nK6-sY-0Ik"/>
                         <outlet property="divide" destination="DWK-kq-Kya" id="htu-kl-efm"/>
+                        <outlet property="equal" destination="pzw-Hk-QXG" id="0s3-ZM-yfA"/>
                         <outlet property="flipSign" destination="1vm-sS-yX3" id="wH0-83-5zX"/>
-                        <outlet property="minus" destination="EMJ-kM-Bis" id="oF2-bM-rtd"/>
+                        <outlet property="minus" destination="TKH-TK-3Kq" id="Nvd-s4-Hsg"/>
                         <outlet property="modulus" destination="KmH-QJ-xa6" id="RZc-wb-DUL"/>
                         <outlet property="multiply" destination="PuV-xa-VEu" id="dgb-3v-HC3"/>
-                        <outlet property="plus" destination="pzw-Hk-QXG" id="WIe-1r-hhR"/>
+                        <outlet property="plus" destination="EMJ-kM-Bis" id="Chm-fW-ter"/>
                         <outlet property="previous" destination="eQg-PY-mqX" id="1nl-uA-0I2"/>
                     </connections>
                 </viewController>

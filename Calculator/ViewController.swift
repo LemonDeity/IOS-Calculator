@@ -27,9 +27,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var modulus: UIButton!
     @IBOutlet weak var divide: UIButton!
     @IBOutlet weak var multiply: UIButton!
-    @IBOutlet weak var carrot: UIButton!
     @IBOutlet weak var minus: UIButton!
     @IBOutlet weak var plus: UIButton!
+    @IBOutlet weak var equal: UIButton!
     @IBOutlet weak var decimal: UIButton!
     
     override func viewDidLoad() {
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
                 lastOp = Character("%")
             case "±":
                 print("±")
-                lastOp = Character("±")
+                currAns *= -1
             case ".":
                 print(".")
                 if decimalOn{
