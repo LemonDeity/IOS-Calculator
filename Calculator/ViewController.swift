@@ -36,71 +36,126 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    var currPlaceValue:Int = 0
+    var decimalOn = false
+    var negative = false
+    var lastOp:Character = Character(" ")
+    var prevNum:Double = 0{
+        willSet{
+            previous.text = ""
+        }didSet{
+            previous.text = String(prevNum)
+        }
+    }
     var currAns:Double = 0{
         willSet{
             answer.text = String(currAns)
         }didSet{
+            if !decimalOn{
+                answer.text = String(Int(currAns))
+            }else{
             answer.text = String(currAns)
+            }
         }
     }
     
-    var currPlaceValue:Int = 0
     //negative numbers denote values below ones place-value
     
-   
     @IBAction func buttonPressed(_ sender: UIButton) {
         if let u = sender.titleLabel?.text{
             switch(u){
-            case "0":
-                print(0)
-            case "1":
-                createNumber(1)
-                print(1)
-            case "2":
-                print(2)
-            case "3":
-                print(3)
-            case "4":
-                print(4)
-            case "5":
-                print(5)
-            case "6":
-                print(6)
-            case "7":
-                print(7)
-            case "8":
-                print(8)
-            case "9":
-                print(9)
             case "+":
                 print("+")
+                transfer()
+                lastOp = Character("+")
             case "-":
                 print("-")
+                transfer()
+                lastOp = Character("-")
             case "Clear":
+                doubleClear()
                 print("Clear")
             case "%":
                 print("%")
+                transfer()
+                lastOp = Character("%")
             case "±":
                 print("±")
+                lastOp = Character("±")
             case ".":
                 print(".")
+                if decimalOn{
+                    answer.text = "ERROR"
+                    print("ERROR")
+                }else{
+                    decimalOn.toggle()
+                }
             case "÷":
                 print("÷")
-                
+                transfer()
+                lastOp = Character("÷")
             case "X":
                 print("X")
+                transfer()
+                lastOp = Character("X")
             case "=":
                 print("=")
+                doCalc()
             default:
-                print("Something isn't hooked up")
+                print("Something isn't hooked up or the more likely thing it's a number")
+                let num = Int(u) ?? 0
+                createNumber(number : num)
             }
-            
         }
         
-        func createNumber(number : Int){
-            currAns += Double(number*(10^currPlaceValue))
+    }
+    
+    func transfer(){
+        prevNum = currAns
+        clear()
+    }
+    
+    func createNumber(number : Int){
+        if decimalOn{
+            currAns += Double(number)/pow(10,Double(currPlaceValue))
+            currPlaceValue += 1
+        }else{
+            currAns = (currAns*10) + Double(number)
         }
         
+    }
+    
+    func clear(){
+        decimalOn = false
+        negative = false
+        currAns = 0
+        currPlaceValue = 0
+    }
+    
+    func doubleClear(){
+        clear()
+        prevNum = 0
+        previous.text = ""
+    }
+    
+    func doCalc(){
+        var numAns:Double = 0
+        switch lastOp{
+        case "+":
+            numAns = prevNum+currAns
+        case "-":
+            numAns = prevNum-currAns
+        case "%":
+            print("not ready for Calculator")
+        case "÷":
+            numAns = prevNum/currAns
+        case "X":
+            numAns = prevNum*currAns
+        default:
+            print("Something is wrong in the doCalc function")
+        }
+        doubleClear()
+        currAns = numAns
     }
     
 

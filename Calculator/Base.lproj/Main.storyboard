@@ -25,16 +25,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="278"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-PY-mqX">
-                                                <rect key="frame" x="313" y="145" width="93" height="56"/>
+                                                <rect key="frame" x="256" y="145" width="150" height="56"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ial-hM-3H5">
-                                                <rect key="frame" x="313" y="222" width="93" height="56"/>
+                                                <rect key="frame" x="256" y="222" width="150" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="eah-3S-MNf"/>
-                                                    <constraint firstAttribute="width" constant="93" id="oEH-1H-bT9"/>
+                                                    <constraint firstAttribute="width" constant="150" id="oEH-1H-bT9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
