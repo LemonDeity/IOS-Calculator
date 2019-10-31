@@ -9,37 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var numB: [UIButton]!
+    @IBOutlet var operationB: [UIButton]!
     @IBOutlet weak var previous: UILabel!
     @IBOutlet weak var answer: UILabel!
-    @IBOutlet weak var b0: UIButton!
-    @IBOutlet weak var b1: UIButton!
-    @IBOutlet weak var b2: UIButton!
-    @IBOutlet weak var b3: UIButton!
-    @IBOutlet weak var b4: UIButton!
-    @IBOutlet weak var b5: UIButton!
-    @IBOutlet weak var b6: UIButton!
-    @IBOutlet weak var b7: UIButton!
-    @IBOutlet weak var b8: UIButton!
-    @IBOutlet weak var b9: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
-    @IBOutlet weak var flipSign: UIButton!
-    @IBOutlet weak var modulus: UIButton!
-    @IBOutlet weak var divide: UIButton!
-    @IBOutlet weak var multiply: UIButton!
-    @IBOutlet weak var minus: UIButton!
-    @IBOutlet weak var plus: UIButton!
-    @IBOutlet weak var equal: UIButton!
-    @IBOutlet weak var decimal: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    var currPlaceValue:Int = 0
+    var currPlaceValue:Int = 1
     var decimalOn = false
     var negative = false
     var lastOp:Character = Character(" ")
+    var display:Bool = false
     var prevNum:Double = 0{
         willSet{
             previous.text = ""
@@ -51,10 +36,14 @@ class ViewController: UIViewController {
         willSet{
             answer.text = String(currAns)
         }didSet{
-            if !decimalOn{
-                answer.text = String(Int(currAns))
+            if display{
+                answer.text = String(currAns)
             }else{
-            answer.text = String(currAns)
+                if decimalOn{
+                    answer.text = String(currAns)
+                }else{
+                    answer.text = String(Int(currAns))
+                }
             }
         }
     }
@@ -107,7 +96,6 @@ class ViewController: UIViewController {
                 createNumber(number : num)
             }
         }
-        
     }
     
     func transfer(){
@@ -120,7 +108,7 @@ class ViewController: UIViewController {
             currAns += Double(number)/pow(10,Double(currPlaceValue))
             currPlaceValue += 1
         }else{
-            currAns = (currAns*10) + Double(number)
+            currAns = Double(currAns*10) + Double(number)
         }
         
     }
@@ -128,13 +116,14 @@ class ViewController: UIViewController {
     func clear(){
         decimalOn = false
         negative = false
-        currAns = 0
-        currPlaceValue = 0
+        currAns = 0.0
+        currPlaceValue = 1
+        display = false
     }
     
     func doubleClear(){
         clear()
-        prevNum = 0
+        prevNum = 0.0
         previous.text = ""
     }
     
@@ -155,7 +144,18 @@ class ViewController: UIViewController {
             print("Something is wrong in the doCalc function")
         }
         doubleClear()
+        if checkIfWhole(number: numAns){
+            display = false
+        }else{
+            display = true
+        }
         currAns = numAns
+        print(currAns)
+    }
+    
+    func checkIfWhole(number: Double) -> Bool{
+        let num:Int = Int(number)
+        return number-Double(num)==0 ? true : false
     }
     
 

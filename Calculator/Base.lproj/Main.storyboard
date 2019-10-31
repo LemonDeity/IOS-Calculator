@@ -108,7 +108,7 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <state key="normal" title="7"/>
                                                                 <connections>
-                                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="En7-mZ-Ciu"/>
+                                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcO-Sm-kDr"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThL-Ac-kZD">
@@ -286,26 +286,26 @@
                     </view>
                     <connections>
                         <outlet property="answer" destination="Ial-hM-3H5" id="sSW-nF-F6R"/>
-                        <outlet property="b0" destination="R0w-of-ASz" id="oBi-XM-kns"/>
-                        <outlet property="b1" destination="aJ9-QP-3fB" id="vSy-E8-o0o"/>
-                        <outlet property="b2" destination="vu6-vz-KaA" id="B4L-dJ-fGt"/>
-                        <outlet property="b3" destination="1vD-O3-tEC" id="34W-pf-O98"/>
-                        <outlet property="b4" destination="rQX-Rs-JRG" id="uwO-UR-GSy"/>
-                        <outlet property="b5" destination="mpi-xm-cx2" id="8fc-5J-b4e"/>
-                        <outlet property="b6" destination="CSW-3u-hLG" id="z3a-Iu-Kp1"/>
-                        <outlet property="b7" destination="PjZ-L4-7JF" id="XFB-uA-YPD"/>
-                        <outlet property="b8" destination="ThL-Ac-kZD" id="9LY-D5-kLo"/>
-                        <outlet property="b9" destination="hSy-mi-9Hg" id="mVS-qm-2Cf"/>
-                        <outlet property="clearButton" destination="aCk-I5-mUU" id="H3q-c0-VfJ"/>
-                        <outlet property="decimal" destination="8cz-is-Lr4" id="nK6-sY-0Ik"/>
-                        <outlet property="divide" destination="DWK-kq-Kya" id="htu-kl-efm"/>
-                        <outlet property="equal" destination="pzw-Hk-QXG" id="0s3-ZM-yfA"/>
-                        <outlet property="flipSign" destination="1vm-sS-yX3" id="wH0-83-5zX"/>
-                        <outlet property="minus" destination="TKH-TK-3Kq" id="Nvd-s4-Hsg"/>
-                        <outlet property="modulus" destination="KmH-QJ-xa6" id="RZc-wb-DUL"/>
-                        <outlet property="multiply" destination="PuV-xa-VEu" id="dgb-3v-HC3"/>
-                        <outlet property="plus" destination="EMJ-kM-Bis" id="Chm-fW-ter"/>
                         <outlet property="previous" destination="eQg-PY-mqX" id="1nl-uA-0I2"/>
+                        <outletCollection property="numB" destination="R0w-of-ASz" collectionClass="NSMutableArray" id="vyx-CT-xFk"/>
+                        <outletCollection property="numB" destination="aJ9-QP-3fB" collectionClass="NSMutableArray" id="wOX-fL-vwW"/>
+                        <outletCollection property="numB" destination="vu6-vz-KaA" collectionClass="NSMutableArray" id="XS6-Ag-dUo"/>
+                        <outletCollection property="numB" destination="1vD-O3-tEC" collectionClass="NSMutableArray" id="9Pf-3t-tVs"/>
+                        <outletCollection property="numB" destination="rQX-Rs-JRG" collectionClass="NSMutableArray" id="VRq-3K-bTV"/>
+                        <outletCollection property="numB" destination="mpi-xm-cx2" collectionClass="NSMutableArray" id="ly5-PO-kYU"/>
+                        <outletCollection property="numB" destination="CSW-3u-hLG" collectionClass="NSMutableArray" id="EfR-Ls-RTH"/>
+                        <outletCollection property="numB" destination="PjZ-L4-7JF" collectionClass="NSMutableArray" id="P19-ze-1Cf"/>
+                        <outletCollection property="numB" destination="ThL-Ac-kZD" collectionClass="NSMutableArray" id="YRf-dP-N7Z"/>
+                        <outletCollection property="numB" destination="hSy-mi-9Hg" collectionClass="NSMutableArray" id="cl6-bu-FIs"/>
+                        <outletCollection property="operationB" destination="aCk-I5-mUU" collectionClass="NSMutableArray" id="u9C-GX-e5L"/>
+                        <outletCollection property="operationB" destination="1vm-sS-yX3" collectionClass="NSMutableArray" id="4i2-hd-fI9"/>
+                        <outletCollection property="operationB" destination="KmH-QJ-xa6" collectionClass="NSMutableArray" id="2CI-q3-eTh"/>
+                        <outletCollection property="operationB" destination="DWK-kq-Kya" collectionClass="NSMutableArray" id="iTi-Rh-0gO"/>
+                        <outletCollection property="operationB" destination="PuV-xa-VEu" collectionClass="NSMutableArray" id="2xh-o3-4b5"/>
+                        <outletCollection property="operationB" destination="TKH-TK-3Kq" collectionClass="NSMutableArray" id="sGA-Ob-13J"/>
+                        <outletCollection property="operationB" destination="EMJ-kM-Bis" collectionClass="NSMutableArray" id="Ex8-gM-KPw"/>
+                        <outletCollection property="operationB" destination="pzw-Hk-QXG" collectionClass="NSMutableArray" id="Ebv-Yu-Pwt"/>
+                        <outletCollection property="operationB" destination="8cz-is-Lr4" collectionClass="NSMutableArray" id="9cX-4A-40r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
